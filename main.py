@@ -19,10 +19,12 @@ if response.status_code == 200:
     for i in range(len(data)):
         #print(i)
         #print(type(data[i]))
-        #print(data[i])
+        print(data[i])
         print(type(data[i]['markers']))
         print(f"marker: {data[i]['markers']}")
         marker_list = data[i]['markers']
+        content_list = data[i]['contents']
+        print(content_list)
         for j in range(len(marker_list)):
             print(marker_list[j]['s3Url'])
             url = marker_list[j]['s3Url']
