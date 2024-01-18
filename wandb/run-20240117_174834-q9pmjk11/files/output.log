@@ -1,0 +1,72 @@
+c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\torch\autograd\__init__.py:173: UserWarning: Error detected in ReluBackward0. Traceback of forward call that caused the error:
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\ipykernel_launcher.py", line 17, in <module>
+    app.launch_new_instance()
+  File "c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\traitlets\config\application.py", line 1075, in launch_instance
+    app.start()
+  File "c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\ipykernel\kernelapp.py", line 739, in start
+    self.io_loop.start()
+  File "c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\tornado\platform\asyncio.py", line 205, in start
+    self.asyncio_loop.run_forever()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 603, in run_forever
+    self._run_once()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1909, in _run_once
+    handle._run()
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python310\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\ipykernel\kernelbase.py", line 542, in dispatch_queue
+    await self.process_one()
+  File "c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\ipykernel\kernelbase.py", line 531, in process_one
+    await dispatch(*args)
+  File "c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\ipykernel\kernelbase.py", line 437, in dispatch_shell
+    await result
+  File "c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\ipykernel\ipkernel.py", line 359, in execute_request
+    await super().execute_request(stream, ident, parent)
+  File "c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\ipykernel\kernelbase.py", line 775, in execute_request
+    reply_content = await reply_content
+  File "c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\ipykernel\ipkernel.py", line 446, in do_execute
+    res = shell.run_cell(
+  File "c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\ipykernel\zmqshell.py", line 549, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File "c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\IPython\core\interactiveshell.py", line 3051, in run_cell
+    result = self._run_cell(
+  File "c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\IPython\core\interactiveshell.py", line 3106, in _run_cell
+    result = runner(coro)
+  File "c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\IPython\core\async_helpers.py", line 129, in _pseudo_sync_runner
+    coro.send(None)
+  File "c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\IPython\core\interactiveshell.py", line 3311, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File "c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\IPython\core\interactiveshell.py", line 3493, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File "c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\IPython\core\interactiveshell.py", line 3553, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "C:\Users\Admin\AppData\Local\Temp\ipykernel_43676\2703315745.py", line 1, in <module>
+    train_loss,valid_loss,train_accuracy,valid_accuracy =train(
+  File "d:\งาน\AR_classification\utils.py", line 47, in train
+    outputs = model(items)
+  File "c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\torch\nn\modules\module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "d:\งาน\AR_classification\model.py", line 79, in forward
+    x = self.layer3(x)
+  File "c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\torch\nn\modules\module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\torch\nn\modules\container.py", line 139, in forward
+    input = module(input)
+  File "c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\torch\nn\modules\module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "d:\งาน\AR_classification\model.py", line 39, in forward
+    out = self.conv3(out)
+  File "c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\torch\nn\modules\module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\torch\nn\modules\container.py", line 139, in forward
+    input = module(input)
+  File "c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\torch\nn\modules\module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\torch\nn\modules\activation.py", line 98, in forward
+    return F.relu(input, inplace=self.inplace)
+  File "c:\Users\Admin\.virtualenvs\AR_classification-AOelGpcL\lib\site-packages\torch\nn\functional.py", line 1457, in relu
+    result = torch.relu(input)
+ (Triggered internally at  ..\torch\csrc\autograd\python_anomaly_mode.cpp:104.)

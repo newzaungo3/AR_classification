@@ -1,0 +1,40 @@
+
+Epoch 1/500, Tr Loss: 2.0931, Tr Acc: 15.6863, Val Loss: 2.2892, Val Acc: 0.0000
+Epoch 101/500, Tr Loss: 0.0018, Tr Acc: 100.0000, Val Loss: 5.6990, Val Acc: 33.3333
+GroundTruth:  scgc scgc scgp scgp scgp wedo scgc scgc scgp scgp scgp wedo
+Predicted:  wedo scgp scgc wedo scgp wedo scgc scgp scgp wedo scgp wedo
+tensor([0, 0, 1, 1, 1, 2, 0, 0, 1, 1, 1, 2])
+tensor([1, 1, 1, 2, 0, 2, 0, 1, 0, 2, 1, 2])
+12
+5
+Accuracy of the network on the 10000 test images: 41 %
+tensor([0, 0, 1, 1, 1, 2, 0, 0, 1, 1, 1, 2])
+tensor([0, 1, 2, 2, 1, 2, 0, 1, 1, 2, 1, 2])
+12
+7
+Accuracy of the network on the 10000 test images: 58 %
+tensor([0, 0, 0, 1, 1, 2, 2, 2, 0, 0, 0, 1, 1, 2, 2, 2])
+tensor([0, 1, 0, 1, 1, 2, 1, 2, 0, 0, 0, 0, 1, 2, 0, 0])
+16
+11
+Accuracy of the network on the 10000 test images: 68 %
+tensor([0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 1, 1,
+        1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2,
+        2, 2, 2])
+tensor([0, 0, 0, 2, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 1, 1,
+        1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2,
+        2, 2, 2])
+51
+50
+Accuracy of the network on the 10000 test images: 98 %
+tensor([0, 0, 1, 1, 1, 2, 0, 0, 1, 1, 1, 2])
+tensor([2, 1, 1, 2, 1, 2, 0, 1, 1, 2, 0, 0])
+12
+5
+Accuracy of the network on the 10000 test images: 41 %
+GroundTruth:  scgc scgc scgp scgp scgp wedo scgc scgc scgp scgp scgp wedo
+Predicted:  wedo scgc scgp wedo scgp wedo scgc scgp scgc wedo scgp wedo
+tensor([0, 0, 1, 1, 1, 2, 0, 0, 1, 1, 1, 2])
+tensor([1, 1, 1, 2, 0, 2, 0, 1, 1, 2, 1, 2])
+12
+6

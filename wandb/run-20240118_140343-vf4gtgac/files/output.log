@@ -1,0 +1,44 @@
+
+Epoch 1/200, Tr Loss: 1.3099, Tr Acc: 37.5000, Val Loss: 1.1464, Val Acc: 33.3333
+Epoch 11/200, Tr Loss: 1.0928, Tr Acc: 38.3333, Val Loss: 1.1462, Val Acc: 33.3333
+Epoch 21/200, Tr Loss: 0.9924, Tr Acc: 46.6667, Val Loss: 1.0999, Val Acc: 33.3333
+Epoch 31/200, Tr Loss: 0.9858, Tr Acc: 49.1667, Val Loss: 1.0389, Val Acc: 33.3333
+Epoch 41/200, Tr Loss: 0.9621, Tr Acc: 49.1667, Val Loss: 1.0395, Val Acc: 33.3333
+Epoch 51/200, Tr Loss: 0.8877, Tr Acc: 55.0000, Val Loss: 1.0172, Val Acc: 50.0000
+Epoch 61/200, Tr Loss: 0.8863, Tr Acc: 55.8333, Val Loss: 1.0493, Val Acc: 66.6667
+Epoch 71/200, Tr Loss: 0.8878, Tr Acc: 54.1667, Val Loss: 1.0454, Val Acc: 41.6667
+Epoch 81/200, Tr Loss: 0.8962, Tr Acc: 55.0000, Val Loss: 1.0261, Val Acc: 50.0000
+Epoch 91/200, Tr Loss: 1.0337, Tr Acc: 46.6667, Val Loss: 1.0380, Val Acc: 33.3333
+Epoch 101/200, Tr Loss: 0.8733, Tr Acc: 55.8333, Val Loss: 1.0449, Val Acc: 33.3333
+Epoch 111/200, Tr Loss: 0.8496, Tr Acc: 57.5000, Val Loss: 1.0299, Val Acc: 33.3333
+Epoch 121/200, Tr Loss: 0.8979, Tr Acc: 50.0000, Val Loss: 1.0250, Val Acc: 25.0000
+Epoch 131/200, Tr Loss: 0.8504, Tr Acc: 62.5000, Val Loss: 1.0133, Val Acc: 58.3333
+Epoch 141/200, Tr Loss: 0.8622, Tr Acc: 55.8333, Val Loss: 1.2121, Val Acc: 50.0000
+Epoch 151/200, Tr Loss: 0.8254, Tr Acc: 60.8333, Val Loss: 1.0515, Val Acc: 41.6667
+Epoch 161/200, Tr Loss: 0.8204, Tr Acc: 62.5000, Val Loss: 1.0113, Val Acc: 58.3333
+Epoch 171/200, Tr Loss: 0.8314, Tr Acc: 60.0000, Val Loss: 1.0173, Val Acc: 41.6667
+Epoch 181/200, Tr Loss: 0.8039, Tr Acc: 62.5000, Val Loss: 1.0171, Val Acc: 50.0000
+Epoch 191/200, Tr Loss: 0.8200, Tr Acc: 61.6667, Val Loss: 1.0515, Val Acc: 25.0000
+GroundTruth:  scgc scgc scgp scgp scgp wedo scgc scgc scgp scgp scgp wedo
+Predicted:  wedo scgc scgp wedo scgc wedo scgc scgp scgc scgp scgp wedo
+tensor([0, 0, 1, 1, 1, 2, 0, 0, 1, 1, 1, 2])
+tensor([0, 1, 0, 2, 0, 0, 0, 1, 0, 1, 2, 2])
+12
+4
+Accuracy of the network on the 10000 test images: 33 %
+GroundTruth:  scgc scgc scgp scgp scgp wedo scgc scgc scgp scgp scgp wedo
+Predicted:  scgp wedo scgc wedo scgc scgc scgc scgc scgc scgp scgc scgc
+tensor([0, 0, 1, 1, 1, 2, 0, 0, 1, 1, 1, 2])
+tensor([0, 2, 0, 2, 0, 0, 0, 0, 0, 1, 0, 0])
+12
+4
+Accuracy of the network on the 10000 test images: 33 %
+tensor([0, 0, 1, 1, 1, 2, 0, 0, 1, 1, 1, 2])
+tensor([0, 2, 2, 2, 0, 0, 0, 0, 0, 1, 0, 0])
+12
+4
+Accuracy of the network on the 10000 test images: 33 %
+tensor([0, 0, 1, 1, 1, 2, 0, 0, 1, 1, 1, 2])
+tensor([0, 2, 2, 2, 0, 0, 0, 0, 0, 1, 0, 0])
+12
+4

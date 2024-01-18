@@ -1,0 +1,52 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.10.11",
+    "heartbeatAt": "2024-01-17T04:24:26.671739",
+    "startedAt": "2024-01-17T04:24:25.752229",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "<python with no main file>",
+    "codePathLocal": null,
+    "git": {
+        "remote": "https://github.com/newzaungo3/AR_classification.git",
+        "commit": "de873d1771331841441e632d87f36f8f534e585b"
+    },
+    "email": "pongkorn_set@hotmail.com",
+    "root": "D:/\u0e07\u0e32\u0e19/AR_classification",
+    "host": "Newturno",
+    "username": "Admin",
+    "executable": "c:\\Users\\Admin\\.virtualenvs\\AR_classification-AOelGpcL\\Scripts\\python.exe",
+    "cpu_count": 12,
+    "cpu_count_logical": 20,
+    "cpu_freq": {
+        "current": 2100.0,
+        "min": 0.0,
+        "max": 2100.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2100.0,
+            "min": 0.0,
+            "max": 2100.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 931.4960899353027,
+            "used": 664.8609962463379
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3060 Ti",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3060 Ti",
+            "memory_total": 8589934592
+        }
+    ],
+    "memory": {
+        "total": 31.84518051147461
+    }
+}

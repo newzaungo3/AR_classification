@@ -1,0 +1,12 @@
+torch.Size([51, 64, 56, 56])
+torch.Size([51, 64, 58, 58])
+torch.Size([51, 64, 58, 58])
+torch.Size([51, 256, 60, 60])
+tensor([0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 1, 1,
+        1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2,
+        2, 2, 2])
+torch.Size([51, 3, 224, 224])
+scgc scgc scgc scgc scgc scgp scgp scgp scgp scgp scgp wedo wedo wedo wedo wedo wedo scgc scgc scgc scgc scgc scgp scgp scgp scgp scgp scgp wedo wedo wedo wedo wedo wedo scgc scgc scgc scgc scgc scgp scgp scgp scgp scgp scgp wedo wedo wedo wedo wedo wedo
+torch.Size([2, 64, 56, 56])
+torch.Size([2, 64, 58, 58])
+torch.Size([2, 64, 58, 58])

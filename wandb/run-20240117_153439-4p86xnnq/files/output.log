@@ -1,0 +1,33 @@
+['.DS_Store', 'test', 'train', 'val']
+Dataset ImageFolder
+    Number of datapoints: 17
+    Root location: ./dataset/train
+    StandardTransform
+Transform: Compose(
+               ColorJitter(brightness=[0.8, 1.2], contrast=None, saturation=None, hue=[-0.5, 0.5])
+               Resize(size=(224, 224), interpolation=bilinear, max_size=None, antialias=None)
+               RandomPerspective(p=1.0)
+               ToTensor()
+               Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
+           )
+Dataset ImageFolder
+    Number of datapoints: 8
+    Root location: ./dataset/val
+    StandardTransform
+Transform: Compose(
+               ColorJitter(brightness=[0.8, 1.2], contrast=None, saturation=None, hue=[-0.5, 0.5])
+               Resize(size=(224, 224), interpolation=bilinear, max_size=None, antialias=None)
+               RandomPerspective(p=1.0)
+               ToTensor()
+               Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
+           )
+Dataset ImageFolder
+    Number of datapoints: 6
+    Root location: ./dataset/test
+    StandardTransform
+Transform: Compose(
+               ColorJitter(brightness=[0.8, 1.2], contrast=None, saturation=None, hue=[-0.5, 0.5])
+               Resize(size=(224, 224), interpolation=bilinear, max_size=None, antialias=None)
+               RandomPerspective(p=1.0)
+               ToTensor()
+               Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
