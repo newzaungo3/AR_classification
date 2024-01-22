@@ -1,0 +1,37 @@
+
+Epoch 1/200, Tr Loss: 1.4552, Tr Acc: 33.3333, Val Loss: 1.3427, Val Acc: 12.5000
+Epoch 11/200, Tr Loss: 0.9603, Tr Acc: 52.0833, Val Loss: 1.0972, Val Acc: 25.0000
+Epoch 21/200, Tr Loss: 0.9414, Tr Acc: 52.7778, Val Loss: 0.9697, Val Acc: 50.0000
+Epoch 31/200, Tr Loss: 0.8156, Tr Acc: 63.8889, Val Loss: 0.8427, Val Acc: 62.5000
+Epoch 41/200, Tr Loss: 0.8614, Tr Acc: 55.5556, Val Loss: 0.8897, Val Acc: 81.2500
+Epoch 51/200, Tr Loss: 0.7665, Tr Acc: 61.8056, Val Loss: 1.1080, Val Acc: 25.0000
+Epoch 61/200, Tr Loss: 0.7477, Tr Acc: 66.6667, Val Loss: 1.3938, Val Acc: 18.7500
+Epoch 71/200, Tr Loss: 0.5753, Tr Acc: 79.8611, Val Loss: 1.5329, Val Acc: 18.7500
+Epoch 81/200, Tr Loss: 0.5223, Tr Acc: 80.5556, Val Loss: 1.4319, Val Acc: 31.2500
+Epoch 91/200, Tr Loss: 0.5414, Tr Acc: 75.6944, Val Loss: 1.3441, Val Acc: 31.2500
+Epoch 101/200, Tr Loss: 0.5101, Tr Acc: 79.8611, Val Loss: 1.1373, Val Acc: 56.2500
+Epoch 111/200, Tr Loss: 0.4826, Tr Acc: 83.3333, Val Loss: 1.0393, Val Acc: 56.2500
+Epoch 121/200, Tr Loss: 0.3528, Tr Acc: 87.5000, Val Loss: 1.5028, Val Acc: 43.7500
+Epoch 131/200, Tr Loss: 0.3718, Tr Acc: 86.1111, Val Loss: 0.9392, Val Acc: 56.2500
+Epoch 141/200, Tr Loss: 0.2601, Tr Acc: 90.9722, Val Loss: 0.7257, Val Acc: 68.7500
+Epoch 151/200, Tr Loss: 0.2829, Tr Acc: 88.8889, Val Loss: 1.4994, Val Acc: 50.0000
+Epoch 161/200, Tr Loss: 0.2672, Tr Acc: 88.8889, Val Loss: 0.9522, Val Acc: 56.2500
+Epoch 171/200, Tr Loss: 0.1833, Tr Acc: 94.4444, Val Loss: 1.0555, Val Acc: 56.2500
+Epoch 181/200, Tr Loss: 0.2270, Tr Acc: 90.2778, Val Loss: 0.8641, Val Acc: 56.2500
+Epoch 191/200, Tr Loss: 0.2645, Tr Acc: 93.7500, Val Loss: 1.2258, Val Acc: 50.0000
+GroundTruth:  scgc scgc scgp scgp scgp wedo wedo wedo wedo wedo wedo wedo wedo wedo wedo wedo
+Predicted:  scgc scgp scgp wedo scgp wedo scgp scgp wedo scgc wedo wedo wedo scgc wedo scgp
+tensor([0, 0, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2])
+tensor([0, 1, 1, 2, 1, 2, 1, 1, 2, 0, 0, 0, 2, 1, 2, 2])
+16
+8
+Accuracy of the network on the 10000 test images: 50 %
+tensor([0, 0, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2])
+tensor([0, 2, 1, 2, 1, 2, 1, 1, 2, 0, 0, 2, 2, 1, 2, 1])
+16
+8
+Accuracy of the network on the test images: 50 %
+tensor([0, 0, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2])
+tensor([0, 1, 1, 2, 1, 2, 1, 1, 2, 0, 0, 0, 2, 1, 2, 1])
+16
+7

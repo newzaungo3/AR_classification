@@ -1,0 +1,41 @@
+
+Epoch 1/200, Tr Loss: 1.3052, Tr Acc: 34.0278, Val Loss: 1.0232, Val Acc: 50.0000
+Epoch 11/200, Tr Loss: 1.1784, Tr Acc: 43.7500, Val Loss: 1.1895, Val Acc: 50.0000
+Epoch 21/200, Tr Loss: 1.1792, Tr Acc: 44.4444, Val Loss: 1.1203, Val Acc: 50.0000
+Epoch 31/200, Tr Loss: 1.1028, Tr Acc: 51.3889, Val Loss: 1.1084, Val Acc: 33.3333
+Epoch 41/200, Tr Loss: 0.8777, Tr Acc: 59.7222, Val Loss: 1.0591, Val Acc: 33.3333
+Epoch 51/200, Tr Loss: 0.8134, Tr Acc: 62.5000, Val Loss: 1.1153, Val Acc: 50.0000
+Epoch 61/200, Tr Loss: 0.7841, Tr Acc: 67.3611, Val Loss: 0.8519, Val Acc: 66.6667
+Epoch 71/200, Tr Loss: 0.5004, Tr Acc: 80.5556, Val Loss: 1.1185, Val Acc: 50.0000
+Epoch 81/200, Tr Loss: 0.6258, Tr Acc: 75.0000, Val Loss: 0.4380, Val Acc: 66.6667
+Epoch 91/200, Tr Loss: 0.4771, Tr Acc: 81.2500, Val Loss: 1.6263, Val Acc: 66.6667
+Epoch 101/200, Tr Loss: 0.4283, Tr Acc: 81.2500, Val Loss: 0.7040, Val Acc: 66.6667
+Epoch 111/200, Tr Loss: 0.3948, Tr Acc: 82.6389, Val Loss: 0.4632, Val Acc: 83.3333
+Epoch 121/200, Tr Loss: 0.4457, Tr Acc: 82.6389, Val Loss: 1.3308, Val Acc: 50.0000
+Epoch 131/200, Tr Loss: 0.3674, Tr Acc: 86.8056, Val Loss: 1.2852, Val Acc: 33.3333
+Epoch 141/200, Tr Loss: 0.3538, Tr Acc: 85.4167, Val Loss: 0.0960, Val Acc: 100.0000
+Epoch 151/200, Tr Loss: 0.4683, Tr Acc: 84.7222, Val Loss: 0.4502, Val Acc: 66.6667
+Epoch 161/200, Tr Loss: 0.4231, Tr Acc: 84.0278, Val Loss: 0.2949, Val Acc: 83.3333
+Epoch 171/200, Tr Loss: 0.3872, Tr Acc: 83.3333, Val Loss: 0.3226, Val Acc: 83.3333
+Epoch 181/200, Tr Loss: 0.2248, Tr Acc: 91.6667, Val Loss: 0.7778, Val Acc: 66.6667
+GroundTruth:  scgc scgc scgp scgp
+Predicted:  scgc scgp scgp wedo
+GroundTruth:  scgc scgc scgp scgp
+Predicted:  scgp scgp scgp wedo
+GroundTruth:  scgc scgc scgp scgp scgp wedo
+Predicted:  scgc scgp scgp wedo scgp wedo
+tensor([0, 0, 1, 1, 1, 2])
+tensor([0, 1, 1, 2, 1, 2])
+6
+4
+tensor([0, 0, 1, 1, 1, 2])
+tensor([0, 1, 1, 2, 1, 2])
+6
+4
+Accuracy of the network on the 10000 test images: 66 %
+GroundTruth:  scgc scgc scgp scgp scgp wedo
+Predicted:  scgc scgp scgp wedo scgp wedo
+tensor([0, 0, 1, 1, 1, 2])
+tensor([0, 1, 1, 2, 1, 2])
+6
+4

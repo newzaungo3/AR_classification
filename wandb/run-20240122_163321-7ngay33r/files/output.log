@@ -1,0 +1,22 @@
+
+Epoch 1/200, Tr Loss: 1.1254, Tr Acc: 30.0926, Val Loss: 1.1263, Val Acc: 8.6957
+Epoch 11/200, Tr Loss: 0.9854, Tr Acc: 49.5370, Val Loss: 1.0490, Val Acc: 43.4783
+Epoch 21/200, Tr Loss: 0.8810, Tr Acc: 57.8704, Val Loss: 1.0786, Val Acc: 43.4783
+Epoch 31/200, Tr Loss: 0.7576, Tr Acc: 70.3704, Val Loss: 1.0834, Val Acc: 43.4783
+Epoch 41/200, Tr Loss: 0.6156, Tr Acc: 81.4815, Val Loss: 1.0225, Val Acc: 43.4783
+Epoch 51/200, Tr Loss: 0.5188, Tr Acc: 83.3333, Val Loss: 1.1278, Val Acc: 43.4783
+Epoch 61/200, Tr Loss: 0.3907, Tr Acc: 89.3519, Val Loss: 1.1958, Val Acc: 47.8261
+Epoch 71/200, Tr Loss: 0.2705, Tr Acc: 92.5926, Val Loss: 1.1764, Val Acc: 47.8261
+Epoch 81/200, Tr Loss: 0.2204, Tr Acc: 95.3704, Val Loss: 1.0077, Val Acc: 65.2174
+Epoch 91/200, Tr Loss: 0.1523, Tr Acc: 97.2222, Val Loss: 1.5884, Val Acc: 56.5217
+GroundTruth:  scgc scgc scgp scgp scgp scgp scgp scgp scgp scgp scgp scgp wedo wedo wedo wedo wedo wedo wedo wedo wedo wedo wedo
+Predicted:  scgc wedo wedo wedo wedo scgp scgc scgp scgc wedo scgp wedo wedo scgp wedo scgp scgc scgp wedo wedo scgp scgp scgp
+tensor([0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2])
+tensor([2, 2, 1, 2, 2, 1, 1, 1, 0, 2, 1, 2, 2, 1, 2, 1, 0, 1, 0, 1, 0, 0, 1])
+23
+7
+Accuracy of the network on the test images: 30 %
+tensor([0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2])
+tensor([0, 2, 1, 2, 2, 1, 0, 1, 0, 2, 1, 2, 2, 1, 1, 1, 0, 0, 2, 1, 0, 0, 1])
+23
+7
