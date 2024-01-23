@@ -104,6 +104,8 @@ def train(model, loader_train, loader_test, optimizer,criterion,device,wand,vail
                 newpath = r'./save_weight/{}'.format(weights_name) 
                 if not os.path.exists(newpath):
                     os.makedirs(newpath)
+                print ('Epoch %d/%d, Tr Loss: %.4f, Tr Acc: %.4f, Val Loss: %.4f, Val Acc: %.4f'
+                       %(epoch+1, config.epochs, train_loss[-1], train_accuracy[-1], valid_loss[-1], valid_accuracy[-1]))
                 torch.save(model.state_dict(),'./save_weight/{}/{:.4f}_{}_{:.4f}_{:.4f}.pth'.format(weights_name,valid_loss[-1],weights_name,valid_loss[-1],valid_accuracy[-1]))
                 old_loss = valid_loss[-1]  
                 old_acc = valid_accuracy[-1]

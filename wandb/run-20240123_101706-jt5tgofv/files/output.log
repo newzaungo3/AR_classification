@@ -1,0 +1,18 @@
+
+Epoch 1/200, Tr Loss: 1.3350, Tr Acc: 33.1731, Val Loss: 1.1726, Val Acc: 8.0000
+Epoch 11/200, Tr Loss: 1.1190, Tr Acc: 30.2885, Val Loss: 1.2444, Val Acc: 44.0000
+Epoch 21/200, Tr Loss: 1.0421, Tr Acc: 49.5192, Val Loss: 1.2335, Val Acc: 8.0000
+Epoch 31/200, Tr Loss: 0.9985, Tr Acc: 45.6731, Val Loss: 1.0844, Val Acc: 44.0000
+Epoch 41/200, Tr Loss: 0.9747, Tr Acc: 53.3654, Val Loss: 1.0401, Val Acc: 56.0000
+Epoch 51/200, Tr Loss: 0.9506, Tr Acc: 58.1731, Val Loss: 1.0040, Val Acc: 44.0000
+Epoch 61/200, Tr Loss: 0.9187, Tr Acc: 64.4231, Val Loss: 1.0064, Val Acc: 52.0000
+Epoch 71/200, Tr Loss: 0.9102, Tr Acc: 59.1346, Val Loss: 1.0138, Val Acc: 32.0000
+Epoch 81/200, Tr Loss: 0.8758, Tr Acc: 66.3462, Val Loss: 0.9748, Val Acc: 36.0000
+Epoch 91/200, Tr Loss: 0.8696, Tr Acc: 65.8654, Val Loss: 0.9622, Val Acc: 52.0000
+Epoch 101/200, Tr Loss: 0.8526, Tr Acc: 67.3077, Val Loss: 0.9645, Val Acc: 36.0000
+Epoch 111/200, Tr Loss: 0.8387, Tr Acc: 67.7885, Val Loss: 0.9631, Val Acc: 48.0000
+Epoch 121/200, Tr Loss: 0.8177, Tr Acc: 71.1538, Val Loss: 0.9626, Val Acc: 44.0000
+Epoch 131/200, Tr Loss: 0.7986, Tr Acc: 71.1538, Val Loss: 0.9753, Val Acc: 36.0000
+Epoch 141/200, Tr Loss: 0.7810, Tr Acc: 69.7115, Val Loss: 0.9733, Val Acc: 48.0000
+Epoch 151/200, Tr Loss: 0.7643, Tr Acc: 74.5192, Val Loss: 0.9475, Val Acc: 44.0000
+Epoch 161/200, Tr Loss: 0.7636, Tr Acc: 74.5192, Val Loss: 0.9568, Val Acc: 44.0000
