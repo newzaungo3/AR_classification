@@ -1,0 +1,69 @@
+
+Epoch 1/200, Tr Loss: 1.1309, Tr Acc: 40.3302, Val Loss: 1.0506, Val Acc: 58.6207
+Epoch 3/200, Tr Loss: 0.9861, Tr Acc: 53.0660, Val Loss: 0.9108, Val Acc: 58.6207
+Epoch 4/200, Tr Loss: 0.9687, Tr Acc: 53.7736, Val Loss: 0.8798, Val Acc: 58.6207
+Epoch 5/200, Tr Loss: 0.9541, Tr Acc: 53.5377, Val Loss: 0.8793, Val Acc: 58.6207
+Epoch 6/200, Tr Loss: 0.9519, Tr Acc: 53.3019, Val Loss: 0.8540, Val Acc: 58.6207
+Epoch 7/200, Tr Loss: 0.9428, Tr Acc: 56.1321, Val Loss: 0.8457, Val Acc: 58.6207
+Epoch 8/200, Tr Loss: 0.9321, Tr Acc: 56.1321, Val Loss: 0.8308, Val Acc: 58.6207
+Epoch 9/200, Tr Loss: 0.8956, Tr Acc: 57.5472, Val Loss: 0.8169, Val Acc: 58.6207
+Epoch 10/200, Tr Loss: 0.9157, Tr Acc: 56.1321, Val Loss: 0.8155, Val Acc: 58.6207
+Epoch 11/200, Tr Loss: 0.8997, Tr Acc: 56.6038, Val Loss: 0.7842, Val Acc: 58.6207
+Epoch 11/200, Tr Loss: 0.8997, Tr Acc: 56.6038, Val Loss: 0.7842, Val Acc: 58.6207
+Epoch 13/200, Tr Loss: 0.8538, Tr Acc: 60.8491, Val Loss: 0.7787, Val Acc: 58.6207
+Epoch 14/200, Tr Loss: 0.8412, Tr Acc: 62.9717, Val Loss: 0.7699, Val Acc: 58.6207
+Epoch 15/200, Tr Loss: 0.8357, Tr Acc: 60.1415, Val Loss: 0.7367, Val Acc: 62.0690
+Epoch 16/200, Tr Loss: 0.8431, Tr Acc: 59.1981, Val Loss: 0.7335, Val Acc: 72.4138
+Epoch 17/200, Tr Loss: 0.8248, Tr Acc: 60.1415, Val Loss: 0.7265, Val Acc: 72.4138
+Epoch 18/200, Tr Loss: 0.8056, Tr Acc: 65.3302, Val Loss: 0.7002, Val Acc: 75.8621
+Epoch 20/200, Tr Loss: 0.7841, Tr Acc: 67.6887, Val Loss: 0.6838, Val Acc: 75.8621
+Epoch 21/200, Tr Loss: 0.7703, Tr Acc: 66.5094, Val Loss: 0.6819, Val Acc: 72.4138
+Epoch 21/200, Tr Loss: 0.7703, Tr Acc: 66.5094, Val Loss: 0.6819, Val Acc: 72.4138
+Epoch 22/200, Tr Loss: 0.7503, Tr Acc: 70.2830, Val Loss: 0.6653, Val Acc: 75.8621
+Epoch 23/200, Tr Loss: 0.7455, Tr Acc: 69.5755, Val Loss: 0.6457, Val Acc: 75.8621
+Epoch 24/200, Tr Loss: 0.7547, Tr Acc: 67.9245, Val Loss: 0.6257, Val Acc: 72.4138
+Epoch 26/200, Tr Loss: 0.7344, Tr Acc: 67.9245, Val Loss: 0.6014, Val Acc: 72.4138
+Epoch 28/200, Tr Loss: 0.6795, Tr Acc: 72.6415, Val Loss: 0.5868, Val Acc: 68.9655
+Epoch 29/200, Tr Loss: 0.6747, Tr Acc: 72.8774, Val Loss: 0.5815, Val Acc: 72.4138
+Epoch 30/200, Tr Loss: 0.6692, Tr Acc: 70.7547, Val Loss: 0.5676, Val Acc: 72.4138
+Epoch 31/200, Tr Loss: 0.6510, Tr Acc: 72.6415, Val Loss: 0.5615, Val Acc: 72.4138
+Epoch 31/200, Tr Loss: 0.6510, Tr Acc: 72.6415, Val Loss: 0.5615, Val Acc: 72.4138
+Epoch 32/200, Tr Loss: 0.6400, Tr Acc: 72.1698, Val Loss: 0.5438, Val Acc: 75.8621
+Epoch 33/200, Tr Loss: 0.6422, Tr Acc: 72.8774, Val Loss: 0.5339, Val Acc: 72.4138
+Epoch 34/200, Tr Loss: 0.5968, Tr Acc: 77.1226, Val Loss: 0.5297, Val Acc: 72.4138
+Epoch 35/200, Tr Loss: 0.6009, Tr Acc: 74.5283, Val Loss: 0.5263, Val Acc: 72.4138
+Epoch 36/200, Tr Loss: 0.5552, Tr Acc: 79.4811, Val Loss: 0.5135, Val Acc: 75.8621
+Epoch 37/200, Tr Loss: 0.5676, Tr Acc: 78.5377, Val Loss: 0.5069, Val Acc: 72.4138
+Epoch 38/200, Tr Loss: 0.5522, Tr Acc: 77.3585, Val Loss: 0.5057, Val Acc: 75.8621
+Epoch 39/200, Tr Loss: 0.5555, Tr Acc: 78.5377, Val Loss: 0.4940, Val Acc: 72.4138
+Epoch 41/200, Tr Loss: 0.5073, Tr Acc: 82.0755, Val Loss: 0.4853, Val Acc: 75.8621
+Epoch 41/200, Tr Loss: 0.5073, Tr Acc: 82.0755, Val Loss: 0.4853, Val Acc: 75.8621
+Epoch 42/200, Tr Loss: 0.4846, Tr Acc: 83.7264, Val Loss: 0.4677, Val Acc: 75.8621
+Epoch 44/200, Tr Loss: 0.4417, Tr Acc: 83.9623, Val Loss: 0.4541, Val Acc: 75.8621
+Epoch 46/200, Tr Loss: 0.4318, Tr Acc: 83.9623, Val Loss: 0.4482, Val Acc: 75.8621
+Epoch 47/200, Tr Loss: 0.4101, Tr Acc: 87.7358, Val Loss: 0.4217, Val Acc: 79.3103
+Epoch 49/200, Tr Loss: 0.3832, Tr Acc: 87.9717, Val Loss: 0.4187, Val Acc: 79.3103
+Epoch 51/200, Tr Loss: 0.3658, Tr Acc: 88.4434, Val Loss: 0.4348, Val Acc: 75.8621
+Epoch 53/200, Tr Loss: 0.3664, Tr Acc: 87.5000, Val Loss: 0.4134, Val Acc: 82.7586
+Epoch 54/200, Tr Loss: 0.3506, Tr Acc: 87.7358, Val Loss: 0.4106, Val Acc: 82.7586
+Epoch 61/200, Tr Loss: 0.2946, Tr Acc: 92.2170, Val Loss: 0.4569, Val Acc: 79.3103
+Epoch 67/200, Tr Loss: 0.2267, Tr Acc: 94.1038, Val Loss: 0.4064, Val Acc: 82.7586
+Epoch 71/200, Tr Loss: 0.2044, Tr Acc: 94.3396, Val Loss: 0.4815, Val Acc: 82.7586
+Epoch 81/200, Tr Loss: 0.1600, Tr Acc: 96.4623, Val Loss: 0.5456, Val Acc: 86.2069
+Epoch 91/200, Tr Loss: 0.1326, Tr Acc: 96.6981, Val Loss: 0.5612, Val Acc: 82.7586
+Epoch 101/200, Tr Loss: 0.1060, Tr Acc: 97.8774, Val Loss: 0.8593, Val Acc: 75.8621
+GroundTruth:  scgc scgc scgp scgp scgp scgp scgp scgp scgp scgp scgp scgp scgp scgp scgp scgp scgp scgp scgp wedo wedo wedo wedo wedo wedo wedo wedo wedo wedo
+Predicted:  scgp scgp scgp scgp scgp scgp scgp scgp scgp scgp scgp wedo scgp scgp scgp scgp scgp scgp scgp wedo wedo wedo scgc wedo wedo wedo wedo wedo scgp
+tensor([0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2,
+        2, 2, 2, 2, 2])
+tensor([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 0, 2,
+        2, 2, 2, 2, 1])
+29
+24
+Accuracy of the network on the test images: 82 %
+tensor([0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2,
+        2, 2, 2, 2, 2])
+tensor([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 0, 2,
+        2, 2, 2, 2, 1])
+29
+24
