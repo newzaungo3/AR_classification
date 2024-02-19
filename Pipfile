@@ -8,7 +8,6 @@ url = "https://download.pytorch.org/whl/cu113"
 verify_ssl = true
 name = "fortorch"
 
-
 [packages]
 pillow = "*"
 opencv-python = "*"
@@ -26,6 +25,9 @@ torch = {version="*", index="fortorch"}
 torchvision = {version="*", index="fortorch"}
 torchaudio = {version="*", index="fortorch"}
 ipython = "*"
+datasets = "*"
+open-clip-torch = "*"
+transformers = "*"
 
 [dev-packages]
 jupyter = "*"
