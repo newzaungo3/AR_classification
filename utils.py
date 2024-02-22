@@ -1,152 +1,63 @@
-import copy
-import numpy as np
+import torch.nn.functional as F
 import torch
-from torch.autograd import Variable
-import torch.cuda as cuda
-import os
-from torch.utils.data import TensorDataset
-from torch.utils.data import DataLoader
+from torch import nn
 
 
-def train(model, loader_train, loader_test, optimizer,criterion,device,wand,vail_loader= None,
-          cross = False):
-    # put model on cuda if not already
-    device = torch.device(device)
-    config = wand.config
-    
-    weights_name = config.weightname
-    best_val_loss = + np.infty
-    best_model = copy.deepcopy(model)
-    train_loss = []
-    valid_loss = [10,11]
-    train_accuracy = []
-    valid_accuracy = []
-    
-    old_loss = 100
-    old_acc = 0
-    valid_loss_vail = []
-    
-    for epoch in range(config.epochs):
-        iter_loss = 0.0
-        correct = 0
-        iterations = 0
+class Textual(nn.Module):
+    def __init__(self, model):
+        super().__init__()
+        self.transformer = model.transformer
+        self.positional_embedding = model.positional_embedding
+        self.transformer = model.transformer
+        self.ln_final = model.ln_final
+        self.text_projection = model.text_projection
+        self.token_embedding = model.token_embedding
 
-        model.train()
+    def forward(self, text):
+        x = self.token_embedding(text)  # [batch_size, n_ctx, d_model]
 
-        for i, (items, classes) in enumerate(loader_train):
-            items = Variable(items)
-            classes = classes.type(torch.LongTensor)
-            classes = Variable(classes)
+        x = x + self.positional_embedding
+        x = x.permute(1, 0, 2)  # NLD -> LND
+        x = self.transformer(x)
+        x = x.permute(1, 0, 2)  # LND -> NLD
+        x = self.ln_final(x)
 
-            if cuda.is_available():
-                items = items.to(device=device)
-                classes = classes.to(device=device)
+        # x.shape = [batch_size, n_ctx, transformer.width]
+        # take features from the eot embedding (eot_token is the highest number in each sequence)
+        # needs .float() before .argmax(  ) to work
+        x = x[torch.arange(x.shape[0]), text.float().argmax(dim=-1)] @ self.text_projection
 
-            optimizer.zero_grad()
-            outputs = model(items)
-            loss = criterion(outputs, classes)
-
-            iter_loss += loss.item()
-            loss.backward()
-            optimizer.step()
-            
-            metrics = {"train/train_loss": loss}
-            if i + 1 < config.num_step_per_epoch:
-                # 🐝 Log train metrics to wandb 
-                wand.log(metrics)
-            
-            #print(loss)
-            _, predicted = torch.max(outputs.data, 1)
-            correct += (predicted == classes.data).sum()
-            iterations += 1
-
-        train_loss.append(iter_loss/iterations)
-        
-
-        train_accuracy.append((100 * correct.float() / len(loader_train.dataset)))
-        train_metrics = {"train/train_loss": iter_loss/iterations, 
-                       "train/train_accuracy": (100 * correct.float() / len(loader_train.dataset))}
-        
-        wand.log({**metrics, **train_metrics})
-
-        loss = 0.0
-        correct = 0
-        iterations = 0
-        model.eval()
-        
-        for i, (items, classes) in enumerate(loader_test):
-            items = Variable(items)
-            classes = Variable(classes)
-            
-            if cuda.is_available():
-                items = items.to(device=device)
-                classes = classes.to(device=device)
-            
-            outputs = model(items)
-            loss += criterion(outputs, classes).item()
-            
-            _, predicted = torch.max(outputs.data, 1)
-            correct += (predicted == classes.data).sum()
-            
-            iterations += 1
-        
-        valid_loss.append(loss/iterations)
-        correct_scalar = np.array([correct.clone().cpu()])[0]
-        valid_accuracy.append(correct_scalar / len(loader_test.dataset) * 100.0)
-        
-        val_metrics = {"val/val_loss": loss/iterations, 
-                       "val/val_accuracy": correct_scalar / len(loader_test.dataset) * 100.0}
-        wand.log({**metrics, **val_metrics})
-
-        epoch_acc = correct.double()/len(loader_test.dataset)
-        #and old_acc <= valid_accuracy[-1]
-        if epoch+1 > 2 and valid_loss[-1] < old_loss :
-                newpath = r'./save_weight/{}'.format(weights_name) 
-                if not os.path.exists(newpath):
-                    os.makedirs(newpath)
-                print ('Epoch %d/%d, Tr Loss: %.4f, Tr Acc: %.4f, Val Loss: %.4f, Val Acc: %.4f'
-                       %(epoch+1, config.epochs, train_loss[-1], train_accuracy[-1], valid_loss[-1], valid_accuracy[-1]))
-                torch.save(model.state_dict(),'./save_weight/{}/{:.4f}_{}_{:.4f}_{:.4f}.pth'.format(weights_name,valid_loss[-1],weights_name,valid_loss[-1],valid_accuracy[-1]))
-                old_loss = valid_loss[-1]  
-                old_acc = valid_accuracy[-1]
-        if (epoch % 10) ==0:
-            print ('Epoch %d/%d, Tr Loss: %.4f, Tr Acc: %.4f, Val Loss: %.4f, Val Acc: %.4f'
-                       %(epoch+1, config.epochs, train_loss[-1], train_accuracy[-1], valid_loss[-1], valid_accuracy[-1]))
-         
-        if cross :
-                loss_vail = 0.0
-                correct_vail = 0
-                iterations_vail = 0
-                model.eval()
-
-                for i, (items, classes) in enumerate(vail_loader):
-                    classes = classes.type(torch.LongTensor)
-                    items = Variable(items)
-                    classes = Variable(classes)
-
-                    if cuda.is_available():
-                        items = items.to(device=device)
-                        classes = classes.to(device=device)
+        return x
 
 
-                    outputs = model(items)
-                    loss_vail += criterion(outputs, classes).item()
+def attention(self, x: torch.Tensor):
+    # onnx doesn't like multi_head_attention_forward so this is a reimplementation
+    self.attn_mask = self.attn_mask.to(dtype=x.dtype, device=x.device) if self.attn_mask is not None else None
+    q, k, v = (torch.einsum("tbh, oh -> tbo", x, self.attn.in_proj_weight) + self.attn.in_proj_bias).contiguous().chunk(
+        3, dim=-1)
+    tgt_len = q.shape[0]
+    bsz = q.shape[1]
+    num_heads = self.attn.num_heads
+    head_dim = q.shape[2] // num_heads
+    attn_output = scaled_dot_product_attention(
+        q.reshape(tgt_len, bsz * num_heads, head_dim).transpose(0, 1),
+        k.reshape(tgt_len, bsz * num_heads, head_dim).transpose(0, 1),
+        v.reshape(tgt_len, bsz * num_heads, head_dim).transpose(0, 1), self.attn_mask, 0.0
+    )
+    attn_output = attn_output.transpose(0, 1).contiguous().view(q.shape)
+    attn_output = F.linear(attn_output, self.attn.out_proj.weight, self.attn.out_proj.bias)
+    return attn_output
 
-                    _, predicted = torch.max(outputs.data, 1)
+def scaled_dot_product_attention(Q, K, V, attn_mask, dropout_p):
+    if attn_mask is None:
+        attn_weight = torch.softmax(Q @ K.transpose(-2, -1) / Q.size(-1)**0.5, dim=-1)
+    else:
+        attn_weight = torch.softmax(Q @ K.transpose(-2, -1) / Q.size(-1)**0.5 + attn_mask[None, ...], dim=-1)
+    # attn_weight = torch.dropout(attn_weight, dropout_p) # this is always 0.0 in CLIP so I comment it out.
+    return attn_weight @ V
 
-                    correct_vail += (predicted == classes.data).sum()
-                    #print("correct : {}".format(classes.data))
-                    #print("predicted : {}".format(predicted))
-                    iterations_vail += 1
 
-                valid_loss_vail.append(loss_vail/iterations_vail)
-                correct_scalar = np.array([correct_vail.clone().cpu()])[0]
-                valid_accuracy.append(correct_scalar / len(vail_loader.dataset) * 100.0)
-                vali_metrics = {"val/val_loss": loss_vail/iterations, 
-                        "val/val_accuracy": correct_scalar / len(loader_test.dataset) * 100.0}
-                wand.log({**metrics, **vali_metrics})
-                if (epoch % 10) ==0:
-                    print ('Val Loss: {0}, Val Acc: {1}'.format(valid_loss_vail[-1], valid_accuracy[-1]))
-
-    return train_loss,valid_loss,train_accuracy,valid_accuracy
-
+DEFAULT_EXPORT = dict(input_names=['input'], output_names=['output'],
+                      export_params=True, verbose=False, opset_version=14,
+                      do_constant_folding=True,
+                      dynamic_axes={'input': {0: 'batch_size'}, 'output': {0: 'batch_size'}})
