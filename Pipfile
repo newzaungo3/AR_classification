@@ -28,6 +28,8 @@ ipython = "*"
 datasets = "*"
 open-clip-torch = "*"
 transformers = "*"
+onnx = "*"
+onnxruntime = "*"
 
 [dev-packages]
 jupyter = "*"
