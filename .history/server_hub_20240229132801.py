@@ -53,6 +53,7 @@ def main():
             data = sock.ReadReceivedData()
             #data = receive_image()
             if (data != None):
+                print("Received image data of length:", len(data))
                 print(data)
                 print(type(data))
                 
@@ -69,9 +70,9 @@ def main():
                 if cosine.max() > thre_cosine:  #0.8
                     cosine_class = query_classes[cosine.argmax().numpy().tolist()]
                     sock.SendData(LABEL[cosine_class])
-                    print(LABEL[cosine_class])
                 else:
                     cosine_class = 101
+            
         except WindowsError as e:
                 print(e)
                 break    

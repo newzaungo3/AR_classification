@@ -64,24 +64,25 @@ class UdpComms():
         new_image_data = b""
         num_packets = None
         try:
-            #print("recieve")
+            print("recieve")
             total_size_str, _ = self.udpSock.recvfrom(1024)
             total_size = total_size_str.decode('utf-8')
-            # print(total_size)
+            print(total_size)
             length = int(total_size)
-            # print(length)
-            # print("receive2")
-            # print(len(image_data),length)
+            print()
+            print("receive2")
+            print(len(image_data),length)
             while True:
                 packet, _ = self.udpSock.recvfrom(1026)  # Adjust buffer size as needed
                 #print(len(packet))
                 image_data += packet[2:]
-                # print(len(image_data) <= length)
-                # print('Number' ,len(image_data))
+                print(len(image_data) <= length)
+                print('Number' ,len(image_data))
                 if (len(image_data) == length):
                     break
                 
             
+            print("Exit loop")
             #print(len(image_data))
             #data, _ = self.udpSock.recvfrom(1048576) #Increase buffer size to 64KB     
             data = Image.open(io.BytesIO(image_data)).convert('L')

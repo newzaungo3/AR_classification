@@ -45,8 +45,6 @@ class UdpComms():
     def ReceiveData(self):
         import io
         from PIL import Image
-        import struct
-
         """
         Should not be called by user
         Function BLOCKS until data is returned from C#. It then attempts to convert it to string and returns on successful conversion.
@@ -60,33 +58,9 @@ class UdpComms():
             raise ValueError("Attempting to receive data without enabling this setting. Ensure this is enabled from the constructor")
 
         data = None
-        image_data = b""
-        new_image_data = b""
-        num_packets = None
         try:
-            #print("recieve")
-            total_size_str, _ = self.udpSock.recvfrom(1024)
-            total_size = total_size_str.decode('utf-8')
-            # print(total_size)
-            length = int(total_size)
-            # print(length)
-            # print("receive2")
-            # print(len(image_data),length)
-            while True:
-                packet, _ = self.udpSock.recvfrom(1026)  # Adjust buffer size as needed
-                #print(len(packet))
-                image_data += packet[2:]
-                # print(len(image_data) <= length)
-                # print('Number' ,len(image_data))
-                if (len(image_data) == length):
-                    break
-                
-            
-            #print(len(image_data))
-            #data, _ = self.udpSock.recvfrom(1048576) #Increase buffer size to 64KB     
-            data = Image.open(io.BytesIO(image_data)).convert('L')
-            image_data = b""
-            
+            data, _ = self.udpSock.recvfrom(1048576) #Increase buffer size to 64KB
+            #data = Image.open(io.BytesIO(data)).convert('L')
         except WindowsError as e:
             if e.winerror == 10054: # An error occurs if you try to receive before connecting to other application
                 if not self.suppressWarnings:

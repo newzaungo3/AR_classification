@@ -8,8 +8,6 @@ from transformers import CLIPProcessor, CLIPModel
 import pandas as pd
 import torch
 import matplotlib.pyplot as plt
-import io
-from PIL import Image
 import numpy as np
 import time
 import pickle
@@ -45,13 +43,30 @@ with open('class.pkl', 'rb') as d:
 # print(q_embeddings.shape)
 # print(query_classes)
 
+def receive_image():
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    sock.bind(("0.0.0.0", 8000))
+
+    image_data = b""
+    num_packets = None
+
+    while True:
+        packet, _ = sock.recvfrom(1024)  # Adjust buffer size as needed
+        if num_packets is None:
+            num_packets = struct.unpack("!H", packet[:2])[0]
+        image_data += packet[2:]
+
+        if len(image_data) >= num_packets * 1024:
+            break
+
+    return image_data
+
 
 def main():
     print("hello")
     while True:
         try:
             data = sock.ReadReceivedData()
-            #data = receive_image()
             if (data != None):
                 print(data)
                 print(type(data))
@@ -69,9 +84,9 @@ def main():
                 if cosine.max() > thre_cosine:  #0.8
                     cosine_class = query_classes[cosine.argmax().numpy().tolist()]
                     sock.SendData(LABEL[cosine_class])
-                    print(LABEL[cosine_class])
                 else:
                     cosine_class = 101
+            
         except WindowsError as e:
                 print(e)
                 break    

@@ -69,9 +69,9 @@ def main():
                 if cosine.max() > thre_cosine:  #0.8
                     cosine_class = query_classes[cosine.argmax().numpy().tolist()]
                     sock.SendData(LABEL[cosine_class])
-                    print(LABEL[cosine_class])
                 else:
                     cosine_class = 101
+                time.sleep(1)
         except WindowsError as e:
                 print(e)
                 break    

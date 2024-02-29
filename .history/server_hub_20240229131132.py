@@ -45,14 +45,30 @@ with open('class.pkl', 'rb') as d:
 # print(q_embeddings.shape)
 # print(query_classes)
 
+def receive_image():
+    image_data = b""
+    num_packets = None
+
+    while True:
+        data = sock.ReadReceivedData()
+        if num_packets is None:
+            num_packets = struct.unpack("!H", data[:2])[0]
+        image_data += data[2:]
+
+        if len(image_data) >= num_packets * 1024:
+            break
+    new_data = Image.open(io.BytesIO(image_data)).convert('L')
+    return new_data
+
 
 def main():
     print("hello")
     while True:
         try:
-            data = sock.ReadReceivedData()
-            #data = receive_image()
+            #data = sock.ReadReceivedData()
+            data = receive_image()
             if (data != None):
+                print("Received image data of length:", len(data))
                 print(data)
                 print(type(data))
                 
@@ -69,9 +85,9 @@ def main():
                 if cosine.max() > thre_cosine:  #0.8
                     cosine_class = query_classes[cosine.argmax().numpy().tolist()]
                     sock.SendData(LABEL[cosine_class])
-                    print(LABEL[cosine_class])
                 else:
                     cosine_class = 101
+            
         except WindowsError as e:
                 print(e)
                 break    

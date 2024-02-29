@@ -11,7 +11,7 @@ class UdpComms():
 
         import socket
         self.udpIP = udpIP
-        self.sendIP = '192.168.1.102'
+        self.sendIP = '192.168.1.105'
         self.udpSendPort = portTX
         self.udpRcvPort = portRX
         self.enableRX = enableRX
@@ -82,6 +82,7 @@ class UdpComms():
                     break
                 
             
+            print("Exit loop")
             #print(len(image_data))
             #data, _ = self.udpSock.recvfrom(1048576) #Increase buffer size to 64KB     
             data = Image.open(io.BytesIO(image_data)).convert('L')

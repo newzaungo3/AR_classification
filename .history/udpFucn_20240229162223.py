@@ -11,7 +11,7 @@ class UdpComms():
 
         import socket
         self.udpIP = udpIP
-        self.sendIP = '192.168.1.102'
+        self.sendIP = '192.168.1.105'
         self.udpSendPort = portTX
         self.udpRcvPort = portRX
         self.enableRX = enableRX

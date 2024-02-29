@@ -8,8 +8,6 @@ from transformers import CLIPProcessor, CLIPModel
 import pandas as pd
 import torch
 import matplotlib.pyplot as plt
-import io
-from PIL import Image
 import numpy as np
 import time
 import pickle
@@ -22,7 +20,6 @@ from torchvision.transforms import Resize, CenterCrop, Pad, Compose
 import torchvision.transforms.functional as F
 import open_clip
 from config import * 
-import struct
 
 sock = U.UdpComms(
     udpIP="192.168.1.105", portTX=5000, portRX=8000, enableRX=True, suppressWarnings=True
@@ -45,13 +42,11 @@ with open('class.pkl', 'rb') as d:
 # print(q_embeddings.shape)
 # print(query_classes)
 
-
 def main():
     print("hello")
     while True:
         try:
             data = sock.ReadReceivedData()
-            #data = receive_image()
             if (data != None):
                 print(data)
                 print(type(data))
@@ -69,9 +64,9 @@ def main():
                 if cosine.max() > thre_cosine:  #0.8
                     cosine_class = query_classes[cosine.argmax().numpy().tolist()]
                     sock.SendData(LABEL[cosine_class])
-                    print(LABEL[cosine_class])
                 else:
                     cosine_class = 101
+            
         except WindowsError as e:
                 print(e)
                 break    
