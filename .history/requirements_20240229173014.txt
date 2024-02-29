@@ -14,6 +14,7 @@ wandb == "*"
 tqdm == "*"
 requests == "*"
 keyboard == "*"
+
 ipython == "*"
 datasets == "*"
 open-clip-torch == "*"
