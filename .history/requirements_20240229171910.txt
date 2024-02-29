@@ -1,0 +1,21 @@
+pillow = "*"
+opencv-python = "*"
+pandas = "*"
+scikit-learn = "*"
+seaborn = "*"
+matplotlib = "*"
+scipy = "*"
+torchsummary = "*"
+wandb = "*"
+tqdm = "*"
+requests = "*"
+keyboard = "*"
+torch = {version="*", index="fortorch"}
+torchvision = {version="*", index="fortorch"}
+torchaudio = {version="*", index="fortorch"}
+ipython = "*"
+datasets = "*"
+open-clip-torch = "*"
+transformers = "*"
+onnx = "*"
+onnxruntime = "*"
