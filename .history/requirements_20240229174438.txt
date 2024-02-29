@@ -1,8 +1,7 @@
 --find-links https://download.pytorch.org/whl/cu118
 torch == 2.2.1
-torchvision == 0.17.0
-torchaudio == 2.2.0
-pytorch-cuda=11.8
+torchvision == "*"
+torchaudio == "*"
 pillow == "*"
 opencv-python == "*"
 pandas == "*"
